@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p>“Journaling is like whispering to one’s self and listening at the same time.”- Mina Murray</p>
+
+
+<% posts.forEach(function(post){ %>
+<h1><%= post.title %> </h1>
+<p><%= post.body.substring(0,99) + "..." %>
+    <a href="/posts/<%= post.title%>">Read More</a>
+</p>
+<% }); %>
+
+
+
+
+<%- include("partials/footer"); -%>
